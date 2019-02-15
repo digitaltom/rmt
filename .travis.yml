@@ -9,7 +9,7 @@ cache:
 jobs:
   include:
     - stage: danger
-      if: fork = false
+      if: fork = true
       script: 'bundle exec danger'
     - stage: tests
       script:

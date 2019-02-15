@@ -8,7 +8,7 @@ cache:
 
 stages:
   - name: danger
-    if: fork = true
+    if: fork = false
   - test
 
 jobs:

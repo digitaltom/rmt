@@ -3,6 +3,8 @@ rvm:
   # SLES15
   - 2.5.0
 
+cache: bundler
+
 stages:
   - name: danger
     if: fork = false

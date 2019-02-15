@@ -10,7 +10,7 @@ cache:
 
 stages:
   - name: danger
-    if: fork = false
+    if: fork = true
   - test
 
 jobs:

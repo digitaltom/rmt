@@ -4,7 +4,7 @@ rvm:
   - 2.5.0
 
 cache: 
-  bundler
+  - bundler
   directories:
     - /home/travis/.rvm/
 

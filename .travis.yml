@@ -3,7 +3,10 @@ rvm:
   # SLES15
   - 2.5.0
 
-cache: bundler
+cache: 
+  bundler
+  directories:
+    - /home/travis/.rvm/
 
 stages:
   - name: danger

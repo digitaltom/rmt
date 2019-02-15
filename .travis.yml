@@ -6,19 +6,15 @@ rvm:
 cache: 
   - bundler
 
-stages:
-  - name: danger
-    if: fork = false
-  - test
-
 jobs:
   include:
     - stage: danger
+      if: fork = false
       script: 'bundle exec danger'
-
-script:
-  - 'bundle exec rails db:migrate RAILS_ENV=test'
-  - 'bundle exec rake test'
+    - stage: tests
+      script:
+        - 'bundle exec rails db:migrate RAILS_ENV=test'
+        - 'bundle exec rake test'
  
 services:
   - mysql

@@ -3,8 +3,17 @@ rvm:
   # SLES15
   - 2.5.0
 
+stages:
+  - name: danger
+    if: fork = false
+  - test
+
+jobs:
+  include:
+    - stage: danger
+      script: 'bundle exec danger'
+
 script:
-  - bundle exec danger
   - 'bundle exec rails db:migrate RAILS_ENV=test'
   - 'bundle exec rake test'
 

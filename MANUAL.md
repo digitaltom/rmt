@@ -1,4 +1,4 @@
-rmt-cli(8) -- control and configure your RMT server
+rmt-cli(8) -- control and configure your RMT server  
 ===========================================================================
 
 ## DESCRIPTION
